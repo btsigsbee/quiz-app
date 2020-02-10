@@ -1,12 +1,50 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import React, {Component} from 'react';
+import ReactDOM from "react-dom";
+import "./assets/style.css"
+import Vec from './Germany_Team_Vector.svg'
+import Quiz from './Quiz.js';
 
-ReactDOM.render(<App />, document.getElementById('root'));
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+
+class Menu extends Component{
+    state = {
+        renderView:false
+    };
+    
+    clickBtn= e =>{
+        if(this.state.renderView === false){
+            this.setState({renderView: true});
+        }
+        else {
+            this.setState({renderView: false});
+        };
+    
+    };
+    render(){
+        switch (this.state.renderView){
+        case false:
+        return(
+        <div className='mainCon'><div className='menuCon'><h1 className='title'>Dortmund Trivia Quiz</h1>
+        <img className= 'img' alt='logo' src={Vec}></img><br />
+        <button className='btn' onClick={this.clickBtn}>Start Quiz</button>
+        
+        </div>
+        </div>
+        );
+        case true: 
+            return <Quiz />;
+        default:
+            return(
+                <div className='mainCon'><div className='menuCon'><h1 className='title'>Dortmund Trivia Quiz</h1>
+                <img className= 'img' alt='logo' src={Vec}></img><br />
+                <button className='btn' onClick={this.clickBtn}>Start Quiz</button>
+                </div>
+                </div>
+                );
+
+    }
+}
+}
+const rootElement = document.getElementById("root");
+
+ReactDOM.render(<Menu />, rootElement);
