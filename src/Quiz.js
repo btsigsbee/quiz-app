@@ -1,90 +1,88 @@
 import React, {Component} from 'react';
 import "./assets/style.css"
 import quizService from './quizService';
-import QuestionBox from './components/QuestionBox.js';
+import Question from './components/Question';
 import Result from './components/Result';
-
+import Answer from './components/Answer';
 class Quiz extends Component {
     state={
         questionBank: [],
         score:0,
         responses:0,
-        questionNum:0
+        questionNum:0,
+        q: '',
+        answers: '',
+        id: 0, 
+        selectedA: '',
+
+        
     };
+    
     getQuestions = () => {
-        quizService().then(question => {
-            
-            this.setState({questionBank: question,
-            
+        
+        quizService().then(question=>{
+            this.setState({questionBank: question});
+            var QB= this.state.questionBank;
+            this.setState({q: QB[0].question});
+            this.setState({answers: QB[0].answers});
+            this.setState({id: QB[0].id});
         });
         
-        this.setState({questionNum: this.state.questionNum + 1});
+              
+        
+        
+        
+        
+        
+        
         
             
-        });
-    };
+        
     
-    computeAnswer = (answer, correctAnswer) =>{
-        if(correctAnswer === answer){
-            this.setState({
-                score: this.state.score + 1 
+    
+    
 
-            });
+    };
+    checkAnswer = (pts, answer, correctA) =>{
+        if(correctA===answer){
+            console.log(correctA + '  ' +answer)
+            console.log(this.state.score);
+            console.log(pts);
+            pts++;
+            console.log(pts);
             
+
         }
-        this.setState({
-            responses: this.state.responses + 1
-        });
-        this.checkGame();
+        this.setState({score: pts});
+        console.log(this.state.score);
+        
+
+
+    };
     
-    };
-   
-
-
-    checkGame(){
-        if (this.state.questionNum < 5 && this.state.responses < 5)
-        {
-            this.getQuestions();
-        }
-        else{
-        }
-    }
-     
-    playAgain = () => {
-        this.getQuestions();
-        this.setState({
-            responses: 0,
-            score: 0,
-            questionNum: 0
-
-        });
-    };
-
+    
     startGame(){
         this.getQuestions()
+        this.setState({score: 0});
     }
     componentDidMount() {
         this.startGame()
     };
 render(){
     return(
-        <div className ='container'>
-            <div className='title'>Borussia Dortmund Quiz</div>
-            {this.state.questionBank.length > 0 &&
-            this.state.responses < 5 &&
-            this.state.questionBank.map(({question, answers, correct, questionId}) =>(
-            <QuestionBox question={question} options={answers} key={questionId} selected={answer => this.computeAnswer(answer, correct)} />
-            )
-            )
-            }
-            {this.state.responses === 5 ? (<Result score={this.state.score} playAgain={this.playAgain}
-    />):null}
-        
+        <div >
+            <Question className='question'  text={this.state.q}/>
+            {this.state.questionBank.map(({answers, correct, questionId})=>(
+            <Answer options={answers} key={questionId} selected={answer=>this.checkAnswer(this.state.score, answer, correct)}/>
+
+            ))
             
-        </div>
+    }
+    </div>
     );
 }
 
 }
+
 
 export default Quiz;
