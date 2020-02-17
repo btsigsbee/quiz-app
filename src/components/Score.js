@@ -3,9 +3,8 @@ import React, {Component, useState} from 'react';
 class Score extends Component{
     render(){
         return(
-            <div>
-
-                <h1 className='question'>{this.props.text}</h1>
+            <div className='score-board'>
+                <h1 className='score'>You scored {this.props.text}/5</h1>
             </div>
         );
     }

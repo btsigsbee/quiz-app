@@ -73,19 +73,25 @@ class Quiz extends Component {
         this.startGame()
     };
 render(){
-    const rep = this.state.responses;
-    return(
-        <div >
-            <Question className='question'  text={this.state.q}/>
-            {this.state.questionBank.map(({answers, correct, questionId})=>(
-            <Answer options={answers} key={questionId} selected={answer=>this.checkAnswer(this.state.score, this.state.responses, answer, correct)}/>
+    switch(this.state.responses){
+        case 5:
+            return( <Score  text={this.state.score}/>);
+        default: 
+            return(<div >
             
-            )
-            )
-            
+                <Question className='question'  text={this.state.q}/>
+                {this.state.questionBank.map(({answers, correct, questionId})=>(
+                <Answer options={answers} key={questionId} selected={answer=>this.checkAnswer(this.state.score, this.state.responses, answer, correct)}/>
+                
+                )
+                )
+                
+        }
+        </div>);
+
+
     }
-    </div>
-    );
+    
 }
 
 }
