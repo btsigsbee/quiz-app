@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import "./assets/style.css"
 import quizService from './quizService';
 import Question from './components/Question';
-import Result from './components/Result';
+import Score from './components/Score';
 import Answer from './components/Answer';
 class Quiz extends Component {
     state={
@@ -43,21 +43,25 @@ class Quiz extends Component {
     
 
     };
-    checkAnswer = (pts, answer, correctA) =>{
-        if(correctA===answer){
-            console.log(correctA + '  ' +answer)
-            console.log(this.state.score);
-            console.log(pts);
-            pts++;
-            console.log(pts);
+    checkGame(resp){
+        if(resp === 5){
             
+        }
+        this.getQuestions();
 
+    }
+    checkAnswer = (pts, responses, answer, correctA) =>{
+        if(correctA===answer){
+            console.log(correctA + '  ' +answer);
+            pts++;
+            this.state.score = pts;
         }
         this.setState({score: pts});
         console.log(this.state.score);
-        
-
-
+        responses++;
+        this.state.responses = responses;
+        console.log('responses: '+ this.state.responses);
+        this.checkGame(responses);       
     };
     
     
@@ -69,13 +73,15 @@ class Quiz extends Component {
         this.startGame()
     };
 render(){
+    const rep = this.state.responses;
     return(
         <div >
             <Question className='question'  text={this.state.q}/>
             {this.state.questionBank.map(({answers, correct, questionId})=>(
-            <Answer options={answers} key={questionId} selected={answer=>this.checkAnswer(this.state.score, answer, correct)}/>
-
-            ))
+            <Answer options={answers} key={questionId} selected={answer=>this.checkAnswer(this.state.score, this.state.responses, answer, correct)}/>
+            
+            )
+            )
             
     }
     </div>
