@@ -4,6 +4,7 @@ import quizService from './quizService';
 import Question from './components/Question';
 import Score from './components/Score';
 import Answer from './components/Answer';
+
 class Quiz extends Component {
     state={
         questionBank: [],
@@ -64,7 +65,7 @@ class Quiz extends Component {
         this.checkGame(responses);       
     };
     
-    
+   
     startGame(){
         this.getQuestions()
         this.setState({score: 0});
@@ -75,9 +76,9 @@ class Quiz extends Component {
 render(){
     switch(this.state.responses){
         case 5:
-            return( <Score  text={this.state.score}/>);
+            return(<div><Score  text={this.state.score}/><button className='playBtn'onClick={() => window.location.reload(false)}>Return to Menu</button></div> );
         default: 
-            return(<div >
+            return(<div className='container' >
             
                 <Question className='question'  text={this.state.q}/>
                 {this.state.questionBank.map(({answers, correct, questionId})=>(
