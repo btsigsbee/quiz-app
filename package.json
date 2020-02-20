@@ -1,6 +1,6 @@
 {
   "name": "quiz-app",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "homepage": "http://btsigsbee.github.io/quiz-app",
   "private": true,
   "dependencies": {
@@ -9,7 +9,9 @@
     "@testing-library/user-event": "^7.2.1",
     "create-react-app": "^3.4.0",
     "react": "^16.12.0",
+    "react-document-title": "^2.0.3",
     "react-dom": "^16.12.0",
+    "react-icons": "^3.9.0",
     "react-scripts": "^3.4.0",
     "start": "^5.1.0"
   },

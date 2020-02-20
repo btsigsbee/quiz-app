@@ -78,7 +78,7 @@ render(){
         case 5:
             return(<div><Score  text={this.state.score}/><button className='playBtn'onClick={() => window.location.reload(false)}>Return to Menu</button></div> );
         default: 
-            return(<div className='container' >
+            return(<div className='mainCon'><div className='container' >
             
                 <Question className='question'  text={this.state.q}/>
                 {this.state.questionBank.map(({answers, correct, questionId})=>(
@@ -88,7 +88,7 @@ render(){
                 )
                 
         }
-        </div>);
+        </div></div>);
 
 
     }
