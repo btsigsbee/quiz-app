@@ -10,7 +10,7 @@ class Menu extends Component{
     state = {
         renderView:false
     };
-    
+    S
     clickBtn= e =>{
         if(this.state.renderView === false){
             this.setState({renderView: true});
@@ -22,24 +22,16 @@ class Menu extends Component{
     };
     render(){
         switch (this.state.renderView){
-        case false:
-        return(
-        <div className='mainCon'><div className='menuCon'><h1 className='title'>Dortmund Trivia Quiz</h1>
-        <img className= 'img' alt='logo' src={Vec}></img><br />
-        <button className='btn' onClick={this.clickBtn}>Start Quiz</button>
         
-        </div>
-        </div>
-        );
         case true: 
             return <Quiz />;
         default:
             return(
-                <div className='mainCon'><div className='menuCon'><h1 className='title'>Dortmund Trivia Quiz</h1>
+                <div className='menuCon'><h1 className='title'>Dortmund Trivia Quiz</h1>
                 <img className= 'img' alt='logo' src={Vec}></img><br />
                 <button className='btn' onClick={this.clickBtn}>Start Quiz</button>
                 </div>
-                </div>
+                
                 );
 
     }

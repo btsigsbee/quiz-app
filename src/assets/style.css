@@ -5,37 +5,28 @@
 }
 body{
   background-color: #000000;
+  height:75%;
+  margin-top: -3%
 }
 .btn{
   display: block;
-  width: 100%;
+  width: 50%;
+  
   border: none;
   background-color: #FDE100;
-  padding: 14px 28px;
   font-size: 48px;
   cursor: pointer;
   text-align: center;
   font-family: 'Bebas Neue', cursive;
   border-radius: 12px;
+  align-self: center;
+  
 }
 .img{
-  height: 500px;
+  width: 50%;
   border-radius: 25px;
 }
-.menuCon{
-  margin-left: 25%;
-  align-self: center;
-  background-color: #303030;
-  width: 50%;
-  height: 50%;
-  border-radius: 20px;
-}
-.mainCon{width: 100%;
-  text-align: center;
 
-  width: 100%;
-  height: 100%;
-}
 .container {
   position: absolute;
   width: 1024px;
@@ -49,17 +40,19 @@ body{
   left: 0px;
   right: 0px;
   margin: auto;
+  text-align: center;
 }
 
 .title {
   position: relative;
   background-color: #303030;
   color: rgb(255, 255, 255);
-  font-size: 4.8em;
+  font-size: 3.8em;
   border-radius: 5px;
   text-align: center;
   font-family: 'Bebas Neue', cursive;
-  width: 100%;
+  width: 50%;
+  text-align: center;
 }
 
 .question {
@@ -83,7 +76,11 @@ body{
   
   
 }
-
+.menuCon{
+  padding-top: -5%;
+  margin-left: 35%;
+  align-self: center;
+}
 .answerBtn {
   position: relative;
   padding: 10px;
