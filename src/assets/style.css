@@ -41,13 +41,14 @@ body{
   right: 0px;
   margin: auto;
   text-align: center;
+  padding-top: 2%;
 }
 
 .title {
   position: relative;
   background-color: #303030;
   color: rgb(255, 255, 255);
-  font-size: 3.8em;
+  font-size: 3em;
   border-radius: 5px;
   text-align: center;
   font-family: 'Bebas Neue', cursive;
@@ -68,8 +69,6 @@ body{
 .questionBox {
   position: relative;
   border: 1px solid rgba(0, 0, 0, 0.2);
-  margin-top: 5px;
-  padding: 15px;
   box-sizing: border-box;
   background-color: #303030;
   text-align: center;
