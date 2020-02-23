@@ -5,7 +5,9 @@ import Question from './components/Question';
 import Score from './components/Score';
 import Answer from './components/Answer';
 
+
 class Quiz extends Component {
+ 
     state={
         questionBank: [],
         score:0,
@@ -15,69 +17,80 @@ class Quiz extends Component {
         answers: '',
         id: 0, 
         selectedA: '',
+        totalQs: 7,
+        showScore: false,
+        qID: []
 
         
     };
     
-    getQuestions = () => {
+    getQuestions=()=>{
         
         quizService().then(question=>{
             this.setState({questionBank: question});
             var QB= this.state.questionBank;
-            this.setState({q: QB[0].question});
-            this.setState({answers: QB[0].answers});
-            this.setState({id: QB[0].id});
-        });
-        
-              
-        
-        
-        
-        
-        
-        
-        
+            var qId = this.state.qID.concat(QB[0].questionId);
             
-        
-    
-    
-    
+            this.setState({q: QB[0].question,
+            answers:QB[0].answers,
+            id: QB[0].questionId,
+            qID: qId
+
+            });
+            
+            
+            
+        });
+
 
     };
     checkGame(resp){
-        if(resp === 5){
-            
+        if(resp===this.state.totalQs){
+            this.setState({showScore: true});
         }
         this.getQuestions();
+        
 
     }
     checkAnswer = (pts, responses, answer, correctA) =>{
         if(correctA===answer){
-            console.log(correctA + '  ' +answer);
             pts++;
             this.state.score = pts;
         }
         this.setState({score: pts});
-        console.log(this.state.score);
         responses++;
         this.state.responses = responses;
-        console.log('responses: '+ this.state.responses);
         this.checkGame(responses);       
     };
+    playAgain= () => {
+        this.setState({
+            responses: 0,
+            score: 0,
+            showScore: false
+
+        });
+        this.getQuestions();
+
+    }
     
    
     startGame(){
-        this.getQuestions()
-        this.setState({score: 0});
+        this.setState({score: 0,
+        responses:0,
+        showScore: false
+        });
+        this.getQuestions();
+        
     }
     componentDidMount() {
+        
         this.startGame()
     };
 render(){
-    switch(this.state.responses){
-        case 5:
-            return(<div><Score  text={this.state.score}/><button className='playBtn'onClick={() => window.location.reload(false)}>Return to Menu</button></div> );
-        default: 
+    switch(this.state.showScore){
+        case true:
+            return(<div><Score text={this.state.score} total={this.state.totalQs} /><button className='playBtn'onClick={this.playAgain}>Play Again</button></div>)
+        default:
             return(<div className='mainCon'><div className='container' >
             
                 <Question className='question'  text={this.state.q}/>
@@ -94,8 +107,8 @@ render(){
     }
     
 }
-
 }
+
 
 
 export default Quiz;
