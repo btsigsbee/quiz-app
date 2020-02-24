@@ -241,15 +241,15 @@ const qBank = [
     questionId: "000040"
   },
   {
-    question: "",
-    answers: ["","","",""],
-    correct: "",
+    question: "Erling Haalands initial contract with BVB is set to end in what year?",
+    answers: ["2022","2023","2024","2025"],
+    correct: "2024",
     questionId: "000041"
   },
   {
-    question: "",
-    answers: ["","","",""],
-    correct: "",
+    question: "How tall is Dan-Axel Zagadou?",
+    answers: ["190cm","196 cm","198 cm","189 cm"],
+    correct: "196 cm",
     questionId: "000042"
   },
   {
@@ -263,6 +263,42 @@ const qBank = [
     answers: ["","","",""],
     correct: "",
     questionId: "000044"
+  },
+  {
+    question: "",
+    answers: ["","","",""],
+    correct: "",
+    questionId: "000045"
+  },
+  {
+    question: "",
+    answers: ["","","",""],
+    correct: "",
+    questionId: "000046"
+  },
+  {
+    question: "",
+    answers: ["","","",""],
+    correct: "",
+    questionId: "000047"
+  },
+  {
+    question: "",
+    answers: ["","","",""],
+    correct: "",
+    questionId: "000048"
+  },
+  {
+    question: "",
+    answers: ["","","",""],
+    correct: "",
+    questionId: "000049"
+  },
+  {
+    question: "",
+    answers: ["","","",""],
+    correct: "",
+    questionId: "000049"
   },
 ];
 
