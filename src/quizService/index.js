@@ -197,7 +197,73 @@ const qBank = [
     answers: ["1963","1909","1925","1913"],
     correct: "1913",
     questionId: "000033"
-  }
+  },
+  {
+    question:"In the 2012-13 season, how many goals did Robert Lewandowski score?",
+    answers: ["20", "24", "26", "17"], 
+    correct: "24",
+    questionId: "000034"
+  },
+  {
+    question: "Emre Can was born in which German city?",
+    answers: ["Munich","Berlin","Frankfurt am Main","Leipzig"],
+    correct: "Frankfurt am Main",
+    questionId: "000035"
+  },
+  {
+    question: "Which team has Emre Can not played for?",
+    answers: ["Manchester United","Bayer Leverkusen","Bayern Munich","Juventus"],
+    correct: "Manchester United",
+    questionId: "000036"
+  },
+  {
+    question: "With which club did Jadon Sancho begin his career?",
+    answers: ["Manchester City","Arsenal","Southampton","Watford"],
+    correct: "Watford",
+    questionId: "000037"
+  },
+  {
+    question: "Which Dortmunder was not in the 2014 WC German squad?",
+    answers: ["Kevin Grosskreutz","Erik Durm","Marco Reus","Mats Hummels"],
+    correct: "Marco Reus",
+    questionId: "000038"
+  },
+  {
+    question: "In 2016-17 Pierre-Emerick Aubameyang was the Bundesliga leading scorer with how many goals?",
+    answers: ["29","31","32","27"],
+    correct: "31",
+    questionId: "000039"
+  },
+  {
+    question: "Borussia Dortmund won the 2016-17 DFB-Pokal with what score?",
+    answers: ["1-0","2-0","2-1","3-2"],
+    correct: "2-1",
+    questionId: "000040"
+  },
+  {
+    question: "",
+    answers: ["","","",""],
+    correct: "",
+    questionId: "000041"
+  },
+  {
+    question: "",
+    answers: ["","","",""],
+    correct: "",
+    questionId: "000042"
+  },
+  {
+    question: "",
+    answers: ["","","",""],
+    correct: "",
+    questionId: "000043"
+  },
+  {
+    question: "",
+    answers: ["","","",""],
+    correct: "",
+    questionId: "000044"
+  },
 ];
 
 export default (n = 1) =>

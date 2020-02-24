@@ -30,9 +30,9 @@ class Quiz extends Component {
             this.setState({questionBank: question});
             var QB= this.state.questionBank;
             var qId = this.state.qID.concat(QB[0].questionId);
-            
+            var shuffledAnswers = QB[0].answers.sort(()=>0.5-Math.random(0,1));
             this.setState({q: QB[0].question,
-            answers:QB[0].answers,
+            answers:shuffledAnswers,
             id: QB[0].questionId,
             qID: qId
 
@@ -53,7 +53,7 @@ class Quiz extends Component {
 
     }
     checkAnswer = (pts, responses, answer, correctA) =>{
-        if(correctA===answer){
+        if(answer===correctA||(correctA===answer)){
             pts++;
             this.state.score = pts;
         }
