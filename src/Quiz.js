@@ -1,9 +1,10 @@
 import React, {Component} from 'react';
 import "./assets/style.css"
-import quizService from './quizService';
+import $ from 'jquery';
 import Question from './components/Question';
 import Score from './components/Score';
 import Answer from './components/Answer';
+import quizQuestions from './quizQuestions.js';
 
 
 class Quiz extends Component {
@@ -14,33 +15,53 @@ class Quiz extends Component {
         responses:0,
         questionNum:0,
         q: '',
-        answers: '',
+        answers: [],
         id: 0, 
         selectedA: '',
         totalQs: 7,
         showScore: false,
-        qID: []
+        qID: [],
+        questionId: '',
+        qToGet: '',
+        qArray: []
 
         
     };
-    
-    getQuestions=()=>{
-        
-        quizService().then(question=>{
-            this.setState({questionBank: question});
-            var QB= this.state.questionBank;
-            var qId = this.state.qID.concat(QB[0].questionId);
-            var shuffledAnswers = QB[0].answers.sort(()=>0.5-Math.random(0,1));
-            this.setState({q: QB[0].question,
-            answers:shuffledAnswers,
-            id: QB[0].questionId,
-            qID: qId
+    getQNumber=()=>{
+        this.state.qToGet=  Math.floor(Math.random()*50)+1;
 
-            });
+    }
+    getQToAsk=()=>{
+      
+      this.state.qArray = this.state.qID.concat(this.state.qToGet);
+      if(this.state.qArray.includes(this.state.qToGet)){
+          this.getQNumber();
+            
+    }
+
+    }
+    getQuestions=()=>{
+        this.getQToAsk();
+        
+        
+        var qToAsk = [];
+        
+        var Q = quizQuestions[this.state.qToGet];
+        var shuffledA = Q.answers.sort(()=>0.5-Math.random());
+        this.state.answers= Q.answers;
+        this.state.questionId=Q.questionId;
+        this.state.correct= Q.correct;
+        this.state.q= Q.question;
+        this.state.qID=this.state.qArray;
+        this.state.questionBank=qToAsk;
+        
+        
+        
+
+    
             
             
-            
-        });
+        
 
 
     };
@@ -66,7 +87,8 @@ class Quiz extends Component {
         this.setState({
             responses: 0,
             score: 0,
-            showScore: false
+            showScore: false,
+            qArray: []
 
         });
         this.getQuestions();
@@ -83,7 +105,7 @@ class Quiz extends Component {
         
     }
     componentDidMount() {
-        
+        console.log('hey');
         this.startGame()
     };
 render(){
@@ -94,13 +116,13 @@ render(){
             return(<div className='mainCon'><div className='container' >
             
                 <Question className='question'  text={this.state.q}/>
-                {this.state.questionBank.map(({answers, correct, questionId})=>(
-                <Answer options={answers} key={questionId} selected={answer=>this.checkAnswer(this.state.score, this.state.responses, answer, correct)}/>
+                {
+                <Answer options={this.state.answers} key={this.state.questionId} selected={answer=>this.checkAnswer(this.state.score, this.state.responses, answer, this.state.correct)}/>
                 
-                )
+    }
                 )
                 
-        }
+        
         </div></div>);
 
 
