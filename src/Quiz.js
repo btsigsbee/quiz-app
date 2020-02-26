@@ -29,31 +29,33 @@ class Quiz extends Component {
     };
     getQNumber=()=>{
         this.state.qToGet=  Math.floor(Math.random()*50)+1;
+        this.getQToAsk();
 
     }
     getQToAsk=()=>{
-      
+        if(this.state.qArray.includes(this.state.qToGet)){
+            this.getQNumber();
+              
+      }
       this.state.qArray = this.state.qID.concat(this.state.qToGet);
-      if(this.state.qArray.includes(this.state.qToGet)){
-          this.getQNumber();
-            
-    }
+      
 
     }
     getQuestions=()=>{
-        this.getQToAsk();
+        this.getQNumber();
         
         
         var qToAsk = [];
         
         var Q = quizQuestions[this.state.qToGet];
         var shuffledA = Q.answers.sort(()=>0.5-Math.random());
-        this.state.answers= Q.answers;
+        this.state.answers= shuffledA;
         this.state.questionId=Q.questionId;
         this.state.correct= Q.correct;
         this.state.q= Q.question;
         this.state.qID=this.state.qArray;
         this.state.questionBank=qToAsk;
+        console.log(Q.questionId);
         
         
         
@@ -120,7 +122,7 @@ render(){
                 <Answer options={this.state.answers} key={this.state.questionId} selected={answer=>this.checkAnswer(this.state.score, this.state.responses, answer, this.state.correct)}/>
                 
     }
-                )
+                
                 
         
         </div></div>);

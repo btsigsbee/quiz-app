@@ -10,7 +10,6 @@ class Menu extends Component{
     state = {
         renderView:false
     };
-    S
     clickBtn= e =>{
         if(this.state.renderView === false){
             this.setState({renderView: true});
