@@ -117,7 +117,7 @@ class Quiz extends Component {
 render(){
     switch(this.state.showScore){
         case true:
-            return(<div><Score text={this.state.score} total={this.state.totalQs} /><button className='playBtn'onClick={this.playAgain}>Play Again</button></div>)
+            return(<div className='score-board'><Score text={this.state.score} total={this.state.totalQs} /><button className='playBtn'onClick={this.playAgain}>Play Again</button></div>)
         default:
             return(<div className='mainCon'><div className='container' >
                 <div className='questionBox'>

@@ -247,7 +247,7 @@ var qBank = [{
   },
   {
     question: "How tall is Dan-Axel Zagadou?",
-    answers: ["190cm","196 cm","198 cm","189 cm"],
+    answers: ["190 cm","196 cm","198 cm","189 cm"],
     correct: "196 cm",
     questionId: "000042"
   },
@@ -270,33 +270,33 @@ var qBank = [{
     questionId: "000045"
   },
   {
-    question: "",
-    answers: ["","","",""],
-    correct: "",
+    question: "In which season were Dortmund not Bundesliga champions?",
+    answers: ["1965-66","1995-96","1961-62","2010-11"],
+    correct: "1965-66",
     questionId: "000046"
   },
   {
-    question: "",
-    answers: ["","","",""],
-    correct: "",
+    question: "How many times have Dortmund wont the DFB-Pokal?",
+    answers: ["7 times"," 4 times","3 times","2 times"],
+    correct: "4 times",
     questionId: "000047"
   },
   {
-    question: "",
-    answers: ["","","",""],
-    correct: "",
+    question: "When did Watzke become CEO",
+    answers: ["February 2005"," December 2004","July 2004","July 2005"],
+    correct: "February 2005",
     questionId: "000048"
   },
   {
-    question: "",
-    answers: ["","","",""],
-    correct: "",
+    question: "Stadion Rote Erde was the first team stadium until when?",
+    answers: ["1974","1976","1995","1982"],
+    correct: "1974",
     questionId: "000049"
   },
   {
-    question: "",
-    answers: ["","","",""],
-    correct: "",
+    question: "How many appearances did Roman Weidenfeller make for BVB?",
+    answers: ["355","350","349","301"],
+    correct: "349",
     questionId: "000050"
   },
 ];

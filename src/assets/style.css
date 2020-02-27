@@ -10,8 +10,8 @@ body{
 }
 .btn{
   display: block;
-  width: 65%;
-  
+  width: 55%;
+  height: 10%;
   border: none;
   background-color: #FDE100;
   font-size: 48px;
@@ -23,9 +23,10 @@ body{
   
 }
 .img{
-  width: 65%;
+  width: 55%;
+  
   border-radius: 25px;
-  margin-top: -5%;
+  margin-top: -10%;
 }
 
 .container {
@@ -42,7 +43,7 @@ body{
   right: 0px;
   margin: auto;
   text-align: center;
-  padding-top: 15%;
+  padding-top: 12%;
 }
 
 .title {
@@ -53,8 +54,9 @@ body{
   border-radius: 5px;
   text-align: center;
   font-family: 'Bebas Neue', cursive;
-  width: 70%;
-  height:30%;
+  width: 55%;
+  height:10%;
+  
   
   
 }
@@ -84,7 +86,7 @@ body{
 }
 .menuCon{
   padding-top: -5%;
-  margin-left: 25%;
+  margin-left: 30%;
   align-self: center;
 }
 .answerBtn {
