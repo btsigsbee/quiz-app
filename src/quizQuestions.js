@@ -5,9 +5,9 @@ var qBank = [{
     questionId: "000001"
   },
   {
-    question:'Paco Alcácer was born in',
-    answers: ["Petra, Spain", "Braga, Portugal", "Torrent, Spain", "Madrid, Spain"],
-    correct: "Torrent, Spain",
+    question:'Dan-Axel Zagadou was born in',
+    answers: ["Braga, Protugal", "Paris, France", "Créteil, France", "Le Blanc-Mesnil, France"],
+    correct: "Créteil, France",
     questionId: "000002"
   },
   {
@@ -252,21 +252,21 @@ var qBank = [{
     questionId: "000042"
   },
   {
-    question: "",
-    answers: ["","","",""],
-    correct: "",
+    question: "What are the original colors of BVB?",
+    answers: ["Blue & White","Red & Blue","Black & Yellow","Green & Black"],
+    correct: "Blue & White",
     questionId: "000043"
   },
   {
-    question: "",
-    answers: ["","","",""],
-    correct: "",
+    question: "Who wore the captain's armband the longest?",
+    answers: ["Lothar Huber","Michael Zorc","Marcel Schmelzer","Sebastian Kehl"],
+    correct: "Michael Zorc",
     questionId: "000044"
   },
   {
-    question: "",
-    answers: ["","","",""],
-    correct: "",
+    question: "Borussia Dortmund suffered the biggest defeat in the Bundesliga with what scoreline?",
+    answers: ["9-0","12-0","20-2","12-1"],
+    correct: "12-0",
     questionId: "000045"
   },
   {
@@ -297,7 +297,7 @@ var qBank = [{
     question: "",
     answers: ["","","",""],
     correct: "",
-    questionId: "000049"
+    questionId: "000050"
   },
 ];
 

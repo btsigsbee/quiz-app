@@ -48,14 +48,18 @@ class Quiz extends Component {
         var qToAsk = [];
         
         var Q = quizQuestions[this.state.qToGet];
+        try{
         var shuffledA = Q.answers.sort(()=>0.5-Math.random());
+        
         this.state.answers= shuffledA;
         this.state.questionId=Q.questionId;
         this.state.correct= Q.correct;
         this.state.q= Q.question;
         this.state.qID=this.state.qArray;
         this.state.questionBank=qToAsk;
-        console.log(Q.questionId);
+        }
+        catch{this.getQuestions();}
+
         
         
         
@@ -116,6 +120,7 @@ render(){
             return(<div><Score text={this.state.score} total={this.state.totalQs} /><button className='playBtn'onClick={this.playAgain}>Play Again</button></div>)
         default:
             return(<div className='mainCon'><div className='container' >
+                <div className='questionBox'>
             
                 <Question className='question'  text={this.state.q}/>
                 {
@@ -125,7 +130,7 @@ render(){
                 
                 
         
-        </div></div>);
+                </div></div></div>);
 
 
     }
