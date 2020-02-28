@@ -299,6 +299,18 @@ var qBank = [{
     correct: "349",
     questionId: "000050"
   },
+  {
+    question: "Borussia Dortmund acquired İlkay Gündoğan from which club?",
+    answers: ["Sch*lke","VfL Bochum","1. FC Nürnberg","Werder Bremen"],
+    correct: "1. FC Nürnberg",
+    questionId: "000051"
+  },
+  {
+    question: "What number does Julian Brandt wear?",
+    answers: ["18","19","5","11"],
+    correct: "19",
+    questionId: "000052"
+  },
 ];
 
 export default qBank;
