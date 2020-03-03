@@ -6,7 +6,7 @@ class Score extends Component{
         return(
             <div>
                 <h1 className='score'>You scored {this.props.text}/{this.props.total}</h1>
-
+                
             </div>
         );
     }

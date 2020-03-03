@@ -13,7 +13,6 @@ class Quiz extends Component {
         questionBank: [],
         score:0,
         responses:0,
-        questionNum:0,
         q: '',
         answers: [],
         id: 0, 
@@ -23,7 +22,8 @@ class Quiz extends Component {
         qID: [],
         questionId: '',
         qToGet: '',
-        qArray: []
+        qArray: [],
+        missedQA:[]
 
         
     };
@@ -43,14 +43,10 @@ class Quiz extends Component {
     }
     getQuestions=()=>{
         this.getQNumber();
-        
-        
         var qToAsk = [];
-        
         var Q = quizQuestions[this.state.qToGet];
         try{
         var shuffledA = Q.answers.sort(()=>0.5-Math.random());
-        
         this.state.answers= shuffledA;
         this.state.questionId=Q.questionId;
         this.state.correct= Q.correct;
@@ -59,31 +55,26 @@ class Quiz extends Component {
         this.state.questionBank=qToAsk;
         }
         catch{this.getQuestions();}
-
-        
-        
-        
-
-    
-            
-            
-        
-
-
     };
     checkGame(resp){
         if(resp===this.state.totalQs){
             this.setState({showScore: true});
         }
         this.getQuestions();
-        
-
     }
     checkAnswer = (pts, responses, answer, correctA) =>{
+        var CA= correctA;
         if(answer===correctA||(correctA===answer)){
             pts++;
             this.state.score = pts;
         }
+        else{
+            var missedQ = this.state.q;
+            var missedCA = CA;
+            var QA= missedQ + ' : '+ missedCA;
+            var tArray= this.state.missedQA.concat(QA);
+            this.setState({missedQA: tArray});
+            }
         this.setState({score: pts});
         responses++;
         this.state.responses = responses;
@@ -94,21 +85,17 @@ class Quiz extends Component {
             responses: 0,
             score: 0,
             showScore: false,
-            qArray: []
-
+            qArray: [],
+            missedQA: []
         });
         this.getQuestions();
-
     }
-    
-   
     startGame(){
         this.setState({score: 0,
         responses:0,
         showScore: false
         });
-        this.getQuestions();
-        
+        this.getQuestions();    
     }
     componentDidMount() {
         console.log('hey');
@@ -117,27 +104,20 @@ class Quiz extends Component {
 render(){
     switch(this.state.showScore){
         case true:
-            return(<div className='score-board'><Score text={this.state.score} total={this.state.totalQs} /><button className='playBtn'onClick={this.playAgain}>Play Again</button></div>)
+            return(<div className='score-board'><Score text={this.state.score} total={this.state.totalQs}/>
+                <ul>{this.state.missedQA.map((item, i)=><li className='missedQuestionList' key={i}>{item}</li>)}</ul>
+            
+            <button className='playBtn'onClick={this.playAgain}>Play Again</button></div>)
         default:
             return(<div className='mainCon'><div className='container' >
                 <div className='questionBox'>
             
                 <Question className='question'  text={this.state.q}/>
                 {
-                <Answer options={this.state.answers} key={this.state.questionId} selected={answer=>this.checkAnswer(this.state.score, this.state.responses, answer, this.state.correct)}/>
-                
-    }
-                
-                
-        
+                <Answer options={this.state.answers} key={this.state.questionId} selected={answer=>this.checkAnswer(this.state.score, this.state.responses, answer, this.state.correct)}/>                
+    } 
                 </div></div></div>);
-
-
-    }
-    
+    }   
 }
 }
-
-
-
 export default Quiz;
