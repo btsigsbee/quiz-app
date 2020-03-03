@@ -62,7 +62,7 @@ body{
 }
 
 .question {
-  font-size: 4em;
+  font-size: 3em;
   font-weight: bold;
   margin-bottom: 5px;
   font-family: 'Lato', sans-serif;
@@ -78,14 +78,9 @@ body{
   box-sizing: border-box;
   background-color: #303030;
   text-align: center;
-<<<<<<< HEAD
   width: 75%;
   height: 500px;
   margin-left: 12.5%;
-=======
-  width: 88%;
-  margin-left: 6%;
->>>>>>> dc3b11db790bde5104933265ec0f7b528d877c33
   border-radius: 5px;
   margin-top: 3%;
   padding-top: 5%;
@@ -98,73 +93,78 @@ body{
 }
 .answerBtn {
   position: relative;
-  padding: 10px;
+  padding: 1px;
   background-color: #FDE100;
   display: inline-block;
-  margin: 10px;
+  
   outline: none;
   border: none;
-  font-size: 2.5em;
+  font-size: 2em;
   color: #303030;
   font-weight: bold;
   border-radius: 4px;
   cursor: pointer;
   width: 75%;
-  margin-bottom: 5%;
+  margin-bottom: 2%;
   font-family: 'Lato';
 }
 
 .score-board {
   position: relative;
   height: 700px;
-<<<<<<< HEAD
-  padding-left: 50%;
+
+  margin-left: 20%;
   color: #FDE100;
   font-family: 'Bebas Neue', cursive;
-  width: 100%;
+  width: 75%;
 }
 
 .score {
   
-  
-  font-size: 3em;
+  text-align: left;
+  font-size: 6em;
   top: 250px;
-  
+  width: auto;
 
   color: #FDE100;
   font-family: 'Bebas Neue', cursive;
-  font-size: 2em;
-  width: auto;
-  text-align: center;
+  margin-left: 4.5em;
+  white-space: nowrap;
   
 
 }
 
 .playBtn {
   position: absolute;
-  font-size: 1.4em;
-  padding: 10px;
+  font-size: 3em;
+  
 
   background-color: rgb(46, 182, 46);
   color: rgb(255, 255, 255);
   width: auto;
-  left: 0px;
-  right: 0px;
+  left: 12em;
+  border-color: gainsboro;
   margin: auto;
   outline: none;
   cursor: pointer;
-<<<<<<< HEAD
  
   
 }
 .missedQuestionList{
   font-size: 2.5em;
   list-style-type: none;
-=======
-  margin-top: 2%;
-  font-family: 'Lato';
   
->>>>>>> dc3b11db790bde5104933265ec0f7b528d877c33
+  
+  width: 26em;
+  margin-left: 5em;
+  margin-right: 5em;
+  white-space: nowrap;
+}
+.qHeader{
+  margin-left: 8em;
+  font-size: 3em;
+  color: #fffffe;
+  white-space: nowrap;
 }
 
 

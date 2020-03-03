@@ -105,6 +105,7 @@ render(){
     switch(this.state.showScore){
         case true:
             return(<div className='score-board'><Score text={this.state.score} total={this.state.totalQs}/>
+                <h3 className='qHeader'>Questions Missed : Correct Answer</h3>
                 <ul>{this.state.missedQA.map((item, i)=><li className='missedQuestionList' key={i}>{item}</li>)}</ul>
             
             <button className='playBtn'onClick={this.playAgain}>Play Again</button></div>)
