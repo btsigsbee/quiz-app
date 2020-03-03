@@ -62,7 +62,7 @@ body{
 }
 
 .question {
-  font-size: 3em;
+  font-size: 2em;
   font-weight: bold;
   margin-bottom: 5px;
   font-family: 'Lato', sans-serif;
@@ -99,7 +99,7 @@ body{
   
   outline: none;
   border: none;
-  font-size: 2em;
+  font-size: 1.5em;
   color: #303030;
   font-weight: bold;
   border-radius: 4px;
@@ -122,13 +122,13 @@ body{
 .score {
   
   text-align: left;
-  font-size: 6em;
+  font-size: 4em;
   top: 250px;
   width: auto;
 
   color: #FDE100;
   font-family: 'Bebas Neue', cursive;
-  margin-left: 4.5em;
+  margin-left: 8em;
   white-space: nowrap;
   
 
