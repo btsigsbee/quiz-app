@@ -43,7 +43,7 @@ body{
   right: 0px;
   margin: auto;
   text-align: center;
-  padding-top: 12%;
+  padding-top: 5%;
 }
 
 .title {
@@ -62,7 +62,7 @@ body{
 }
 
 .question {
-  font-size: 2.4em;
+  font-size: 4em;
   font-weight: bold;
   margin-bottom: 5px;
   font-family: 'Lato', sans-serif;
@@ -78,9 +78,14 @@ body{
   box-sizing: border-box;
   background-color: #303030;
   text-align: center;
+<<<<<<< HEAD
   width: 75%;
   height: 500px;
   margin-left: 12.5%;
+=======
+  width: 88%;
+  margin-left: 6%;
+>>>>>>> dc3b11db790bde5104933265ec0f7b528d877c33
   border-radius: 5px;
   margin-top: 3%;
   padding-top: 5%;
@@ -99,17 +104,20 @@ body{
   margin: 10px;
   outline: none;
   border: none;
-  font-size: 1.5em;
+  font-size: 2.5em;
   color: #303030;
   font-weight: bold;
   border-radius: 4px;
   cursor: pointer;
   width: 75%;
+  margin-bottom: 5%;
+  font-family: 'Lato';
 }
 
 .score-board {
   position: relative;
   height: 700px;
+<<<<<<< HEAD
   padding-left: 50%;
   color: #FDE100;
   font-family: 'Bebas Neue', cursive;
@@ -122,6 +130,14 @@ body{
   font-size: 3em;
   top: 250px;
   
+
+  color: #FDE100;
+  font-family: 'Bebas Neue', cursive;
+  font-size: 2em;
+  width: auto;
+  text-align: center;
+  
+
 }
 
 .playBtn {
@@ -131,18 +147,24 @@ body{
 
   background-color: rgb(46, 182, 46);
   color: rgb(255, 255, 255);
-  width: 150px;
+  width: auto;
   left: 0px;
   right: 0px;
   margin: auto;
   outline: none;
   cursor: pointer;
+<<<<<<< HEAD
  
   
 }
 .missedQuestionList{
   font-size: 2.5em;
   list-style-type: none;
+=======
+  margin-top: 2%;
+  font-family: 'Lato';
+  
+>>>>>>> dc3b11db790bde5104933265ec0f7b528d877c33
 }
 
 
