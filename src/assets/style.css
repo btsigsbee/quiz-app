@@ -151,7 +151,7 @@ body{
   
 }
 .missedQuestionList{
-  font-size: 2.5em;
+  font-size: 2em;
   list-style-type: none;
   
   
@@ -161,8 +161,8 @@ body{
   white-space: nowrap;
 }
 .qHeader{
-  margin-left: 8em;
-  font-size: 3em;
+  margin-left: 15em;
+  font-size: 2em;
   color: #fffffe;
   white-space: nowrap;
 }
