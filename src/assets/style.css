@@ -5,16 +5,18 @@
 }
 body{
   background-color: #000000;
-  height:75%;
+  height:60%;
+  
   
 }
+
 .btn{
   display: block;
   width: 55%;
-  height: 10%;
+  height: 1em;
   border: none;
   background-color: #FDE100;
-  font-size: 48px;
+  font-size: 42px;
   cursor: pointer;
   text-align: center;
   font-family: 'Bebas Neue', cursive;
@@ -32,7 +34,7 @@ body{
 .container {
   position: absolute;
   width: 1024px;
-  height: 800px;
+  height: 30em;
   border: 1px solid rgba(0, 0, 0, 0.2);
   box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
@@ -50,7 +52,7 @@ body{
   position: relative;
 
   color: rgb(255, 255, 255);
-  font-size: 3.5em;
+  font-size: 3.3em;
   border-radius: 5px;
   text-align: center;
   font-family: 'Bebas Neue', cursive;
@@ -79,7 +81,7 @@ body{
   background-color: #303030;
   text-align: center;
   width: 75%;
-  height: 500px;
+  height: 25em;
   margin-left: 12.5%;
   border-radius: 5px;
   margin-top: 3%;
@@ -153,7 +155,7 @@ body{
 .missedQuestionList{
   font-size: 1.5em;
   list-style-type: none;
-  margin-left: 3em;
+  margin-left: 4em;
   
   width: 26em;
   white-space: nowrap;
