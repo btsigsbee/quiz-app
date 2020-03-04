@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/quiz-app/static/css/main.a7ab3f3f.chunk.css",
+    "main.css": "/quiz-app/static/css/main.2c32f2d8.chunk.css",
     "main.js": "/quiz-app/static/js/main.ddcfefad.chunk.js",
     "main.js.map": "/quiz-app/static/js/main.ddcfefad.chunk.js.map",
     "runtime-main.js": "/quiz-app/static/js/runtime-main.17c8a596.js",
@@ -8,16 +8,16 @@
     "static/js/2.1d216d9f.chunk.js": "/quiz-app/static/js/2.1d216d9f.chunk.js",
     "static/js/2.1d216d9f.chunk.js.map": "/quiz-app/static/js/2.1d216d9f.chunk.js.map",
     "index.html": "/quiz-app/index.html",
-    "precache-manifest.8f70d57d734005128c6a5f46b58042b3.js": "/quiz-app/precache-manifest.8f70d57d734005128c6a5f46b58042b3.js",
+    "precache-manifest.45987c0eccabf8998625a85a32042ceb.js": "/quiz-app/precache-manifest.45987c0eccabf8998625a85a32042ceb.js",
     "service-worker.js": "/quiz-app/service-worker.js",
-    "static/css/main.a7ab3f3f.chunk.css.map": "/quiz-app/static/css/main.a7ab3f3f.chunk.css.map",
+    "static/css/main.2c32f2d8.chunk.css.map": "/quiz-app/static/css/main.2c32f2d8.chunk.css.map",
     "static/js/2.1d216d9f.chunk.js.LICENSE.txt": "/quiz-app/static/js/2.1d216d9f.chunk.js.LICENSE.txt",
     "static/media/Germany_Team_Vector.svg": "/quiz-app/static/media/Germany_Team_Vector.bd838279.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.17c8a596.js",
     "static/js/2.1d216d9f.chunk.js",
-    "static/css/main.a7ab3f3f.chunk.css",
+    "static/css/main.2c32f2d8.chunk.css",
     "static/js/main.ddcfefad.chunk.js"
   ]
 }
