@@ -122,7 +122,7 @@ body{
 .score {
   
   text-align: left;
-  font-size: 4em;
+  font-size: 3em;
   top: 250px;
   width: auto;
 
@@ -136,7 +136,7 @@ body{
 
 .playBtn {
   position: absolute;
-  font-size: 3em;
+  font-size: 2em;
   
 
   background-color: rgb(46, 182, 46);
