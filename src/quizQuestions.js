@@ -188,7 +188,7 @@ var qBank = [{
   {
     question:"Which year was the Revierderby born?",
     answers: ["1925", "1909", "1927", "1918"],
-    corect: "1925",
+    correct: "1925",
     questionId: "000032"
   },
   {

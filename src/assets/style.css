@@ -128,7 +128,7 @@ body{
 
   color: #FDE100;
   font-family: 'Bebas Neue', cursive;
-  margin-left: 8em;
+  margin-left: 5.5em;
   white-space: nowrap;
   
 
@@ -136,13 +136,13 @@ body{
 
 .playBtn {
   position: absolute;
-  font-size: 2em;
+  font-size: 1.5em;
   
 
   background-color: rgb(46, 182, 46);
   color: rgb(255, 255, 255);
   width: auto;
-  left: 12em;
+  left: 14em;
   border-color: gainsboro;
   margin: auto;
   outline: none;
@@ -151,17 +151,15 @@ body{
   
 }
 .missedQuestionList{
-  font-size: 2em;
+  font-size: 1.5em;
   list-style-type: none;
-  
+  margin-left: 3em;
   
   width: 26em;
-  margin-left: 5em;
-  margin-right: 5em;
   white-space: nowrap;
 }
 .qHeader{
-  margin-left: 15em;
+  margin-left: 6em;
   font-size: 2em;
   color: #fffffe;
   white-space: nowrap;
